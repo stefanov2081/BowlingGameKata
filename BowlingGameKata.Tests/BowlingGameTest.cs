@@ -51,6 +51,14 @@ namespace BowlingGameKata.Tests
             Assert.AreEqual(24, game.Score());
         }
 
+        [TestMethod]
+        public void TestPerfectGame()
+        {
+            RollMany(12, 10);
+
+            Assert.AreEqual(300, game.Score());
+        }
+
         private void RollMany(int n, int pins)
         {
             for (int i = 0; i < n; i++)
