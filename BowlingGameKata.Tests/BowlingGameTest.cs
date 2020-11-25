@@ -11,10 +11,10 @@ namespace BowlingGameKata.Tests
             Game game = new Game();
             for (int i = 0; i < 20; i++)
             {
-                game.roll(0);
+                game.Roll(0);
             }
 
-            Assert.AreEqual(0, game.score());
+            Assert.AreEqual(0, game.Score());
         }
     }
 }
