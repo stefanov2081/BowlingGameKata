@@ -40,6 +40,17 @@ namespace BowlingGameKata.Tests
             Assert.AreEqual(16, game.Score());
         }
 
+        [TestMethod]
+        public void TestOneStrike()
+        {
+            RollStrike();
+            game.Roll(3);
+            game.Roll(4);
+            RollMany(16, 0);
+
+            Assert.AreEqual(24, game.Score());
+        }
+
         private void RollMany(int n, int pins)
         {
             for (int i = 0; i < n; i++)
@@ -52,6 +63,11 @@ namespace BowlingGameKata.Tests
         {
             game.Roll(5);
             game.Roll(5);
+        }
+
+        private void RollStrike()
+        {
+            game.Roll(10);
         }
     }
 }
